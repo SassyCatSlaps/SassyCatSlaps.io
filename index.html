@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Vik Furlow </title>
+    <link rel="stylesheet" type="text/css" href="CSS/index.css">
+    <script src="https://kit.fontawesome.com/14e6c35063.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+
+<body>
+
+<!-- anything that refrences this will take the user to top of webpage -->    
+<div id="top"></div>
+
+<!-- start navbar -->
+<div id="navbar"> <!-- Updated to use id instead of class -->
+    <div class="top-nav-right">
+        <a href="#Home"><img src="images/SmallerLogo.png" alt="VikFurlow Custom Logo"></a>
+    </div>
+    <a href="#About" data-tooltip="About"><i class="fa-solid fa-user fa-sm"></i> </a>
+    <a href="#Projects" data-tooltip="Projects"><i class="fa-solid fa-code-fork fa-sm"></i> </a>
+    <a href="#Skills" data-tooltip="Skills"><i class="fas fa-hat-wizard fa-sm"></i></a>
+    <a href="#Socials" data-tooltip="Socials"><i class="fa-brands fa-github fa-sm"></i> </a>
+</div>
+<!-- end navbar -->
+
+<!-- start icons on left-side -->
+<ul class="social-icons">
+    <li><a href="#top"><i class="fas fa-code-branch"></i></a></li>
+    <li><a href="https://github.com/SassyCatSlaps" target="_blank"><i class="fab fa-github"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/vik-furlow/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+    <li><a href="https://open.spotify.com/playlist/7jvVLjCcg0pqHZsHTWiPup?si=0a69a935027447c7" target="_blank"><i class="fab fa-spotify"></i></a></li>
+</ul>
+<div class="side-icon-tooltip" id="side-icon-tooltip">Back to Top</div>
+<!-- adds a verticle line under the icons -->
+<div class="vertical-line"></div>
+<!-- end left-side icons -->
+
+<!-- start email text right-side -->
+<div class="email-container">
+    <a href="mailto:viktoriyafurlow@gmail.com" class="vertical-email">viktoriyafurlow@gmail.com</a>
+</div>
+<!-- adds a verticle line under the text -->
+<div class="vertical-line2"></div>
+<!-- end email text right-side -->
+
+<!-- start home page text -->
+<div id="Home" class="home-page-text">
+    <h6>
+        Hi, my name is
+    </h6>
+    <h1>
+        Vik Furlow
+    </h1>
+    <div class="home-page-sm-txt">
+        <p> I am a graduate from <a href="https://www.learncodinganywhere.com/">The Tech Academy</a>.
+        I specialize in C# and .NET as a <div class="pink-font1">Full Stack software developer.</div></p>
+        <p>I'd love to work on your project! <br>
+         <a href="mailto:viktoriyafurlow@gmail.com">Contact me</a></p>
+    </div>
+    <div class="resume-button-container">
+        <a class="resume-button resume-link" href="https://docs.google.com/document/d/108sLesZE7IRqNdrkMtXssLYNR1AQfiqmuFsGHDCzh0I/edit?usp=sharing" target="_blank">Resume</a>
+    </div> 
+</div>
+<!-- end home page text -->
+
+<!-- start about me section -->
+<section id="About" class="about-section">
+    <div class="about-section-content">
+        <div class="about-text">
+        <h2 class="blue-heading-1">About Me</h2>
+        <div class="about-image">
+            <img src="images/picOfMe.jfif" alt="a photo of Vik">
+        </div>
+        <div><p class="blue-text-aboutme"><span class="pink-highlight">Passionate</span>, adventurous, and <span class="pink-highlight">reliable</span> professional developer with a growing skill set and experience in many fields.
+                <br />Enjoyer of process improvement and problem solving.
+                <br />Curious, <span class="pink-highlight">creative</span>, detail orientated worker that excels at learning and <span class="pink-highlight">communication</span>.
+                <br />Thrives working on a <span class="pink-highlight">team</span> whether the role is <span class="pink-highlight">leadership</span> and management or working autonomously.
+                <br />Long time lover of <span class="pink-highlight">building electronic hardware</span> and <span class="pink-highlight">IoT</span> devices. 
+                <br />I enjoy a challenge and am driven by accessibility and efficiency.
+                <br />Prior to software development I ran my own <span class="pink-highlight">3D printing</span> business and am an expert in that field.
+                <br />I love using my skills and creativity to <span class="pink-highlight">empower others</span> through <span class="pink-highlight">innovation</span> and <span class="pink-highlight">equity</span>.
+            </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end about me section -->
+
+<!-- start projects section -->
+<section id="Projects" class="projects-section">
+    <div class="projects-section-content">
+        <h2 class="blue-heading-2">Projects</h2>
+        <div class="project-link-text">
+        <div class="project-img1">
+            <img src="images/RCC-min.gif" alt="rave cat clubs website">
+        </div>
+        <div class="project-img2">
+            <img src="images/calculator.gif" alt="Custom Calculator">
+        </div>
+        <div class="project-img3">
+            <img src="images/ArtSite-min.gif" alt="Custom Calculator">
+        </div>
+            <ul>
+                <div class="projects-subheading">HTML/CSS</div>
+
+                <li>
+                    <a href="https://github.com/SassyCatSlaps/HTML-and-CSS-Projects/blob/main/Basic_HTML_and_CSS/Project/The%20Art%20of%20Baten%20Kaitos.html" target="_blank">Art Website</a>
+                </li>
+                <li>
+                    <a href="https://htmlpreview.github.io/?https://github.com/SassyCatSlaps/HTML-and-CSS-Projects/blob/main/bootstrap4_project/rave_cat_clubs.html" target="_blank">Bootstrap Website</a>
+                </li>
+
+                <div class="projects-subheading">JavaScript</div>
+
+                <li>
+                    <a href="https://htmlpreview.github.io/?https://github.com/SassyCatSlaps/JavaScript-Projects/blob/main/Calculator/calculator.html" target="_blank">Calculator</a>
+                </li>
+                <li>
+                    <a href="https://htmlpreview.github.io/?https://github.com/SassyCatSlaps/JavaScript-Projects/blob/main/Basic%20JavaScript%20Projects/JS%20Practice/JavaScript%20Projects/TicTacToe/TicTacToe.html" target="_blank">Tic Tac Toe</a>
+                </li>
+                <li>
+                    <a href="https://htmlpreview.github.io/?https://github.com/SassyCatSlaps/JavaScript-Projects/blob/main/Basic%20JavaScript%20Projects/JS%20Practice/JavaScript%20Projects/Pizza_Project/Pizza.html" target="_blank">Pizza Menu</a>
+                </li>
+                
+                <div class="projects-subheading">C#</div>
+
+                <li>
+                    <a href="https://github.com/SassyCatSlaps/TTA-Basic-C-Sharp-Projects/tree/main/BLACKJACK_minimal_notes/BLACKJACK_minimal_notes_version" target="_blank">Blackjack</a>
+                </li>
+                <li>
+                    <a href="https://github.com/SassyCatSlaps/TTA-Basic-C-Sharp-Projects/tree/main/CarInsurance/CarInsurance" target="_blank">Car Insurance</a>
+                </li>
+                <li>
+                    <a href="https://github.com/SassyCatSlaps/JavaScript-Projects/tree/main/NewsletterAppMVC/NewsletterAppMVC" target="_blank">News Letter</a>
+                </li>
+
+                <div class="projects-subheading">Live Project</div>
+
+                <li>
+                    <a href="https://github.com/SassyCatSlaps/TheaterCMS" target="_blank">Internship</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- end projects section -->
+
+<!-- start skills section -->
+<section id="Skills" class="skills-section">
+    <div class="skills-section-content">
+        <h2 class="blue-heading-3">Skills</h2>
+        <div class="proglanglogos">
+            <img class="langlogos" src="images/prog-lang-logos.png" alt="custom dev lang logos">
+        </div>
+        <div class="skills-subheading">Programming Languages</div>
+        <div class="skills-list-items">
+            <div>HTML/CSS</div>
+            <div>C#</div>
+            <div>JavaScript</div>
+            <div>Python</div>
+        </div>
+        <div class="skills-subheading">Frameworks</div>
+        <div class="frameworkLogos">
+            <img class="framLogos" src="images/FrameworkLogos-1.png" alt="custom framework logos">
+        </div>
+        <div class="skills-list-items">
+            <div>ASP .NET MVC</div>
+            <div>Bootstrap</div>
+            <div>React</div>
+            <div>Redux</div>
+            <div>Gatsby</div>
+            <div>Django</div>
+        </div>
+        <div class="skills-subheading">Project Management</div>
+        <div class="projMangLogos">
+            <img class="managementLogos" src="images/ProjectManagementLogos-1.png"
+                alt="custom project management logos">
+        </div>
+        <div class="skills-list-items">
+            <div>Agile</div>
+            <div>Scrum</div>
+            <div>Azure DevOps</div>
+            <div>Trello</div>
+            <div>Kanban boards</div>
+            <div>Monday</div>
+        </div>
+        <div class="skills-subheading">Databases</div>
+        <div class="DbLogos">
+            <img class="DataBaseLogos" src="images/DatabasesLogos-1.png" alt="custom database logos">
+        </div>
+        <div class="skills-list-items">
+            <div>SQL Server</div>
+            <div>MySQL</div>
+            <div>MongoDB</div>
+            <div>SQLite</div>
+        </div>
+        <div class="skills-subheading">IDEs</div>
+        <div class="IDEsLogos">
+            <img class="ide-Logos" src="images/IDEsLogos-1.png" alt="custom IDE logos">
+        </div>
+        <div class="skills-list-items">
+            <div>Visual Studio</div>
+            <div>VS Code</div>
+            <div>PyCharm</div>
+            <div>Eclipse</div>
+            <div>Notepad++</div>
+        </div>
+        <div class="skills-subheading">Version Control</div>
+        <div class="VCLogos">
+            <img class="VersCntrl-Logos" src="images/VersionControlLogos-1.png" alt="custom VC logos">
+        </div>
+        <div class="skills-list-items">
+            <div>Git</div>
+            <div>SVN</div>
+            <div>GitHub</div>
+            <div>Mercurial</div>
+        </div>
+        <div class="skills-subheading">Tools</div>
+        <div class="ToolsLogos">
+            <img class="Tool-Logos" src="images/ToolsLogos-1.png" alt="custom tool logos">
+        </div>
+        <div class="skills-list-items">
+            <div>Docker</div>
+            <div>FileZilla</div>
+            <div>Jupyter Notebooks</div>
+            <div>jQuery</div>
+            <div>Node.js</div>
+            <div>Chrome DevTools</div>
+            <div>Autodesk Maya</div>
+            <div>Fusion360</div>
+            <div>GIMP</div>
+            <div>Blender 3D CG</div>
+            <div>Adobe</div>
+            <div>ChituBox / Formware 3D</div>
+        </div>
+    </div>
+</section>
+<!-- end skills section -->
+
+<!-- start socials section -->
+<section id="Socials" class="socials-section">
+    <div class="socials-section-content">
+        <h2 class="blue-heading-2">Socials</h2>
+        <div class="socials-subheading">Come say <span class="pink-highlight">hi</span>!</div>
+        <div class="socials-text">
+            <div class="socials-line1">Need <span class="pink-highlight">help engineering</span> your next project?</div>
+            <div class="socials-line2">Got a cute <span class="pink-highlight">cat</span> pic to share?</div>
+            <div class="socials-line3">Whatever it is, here's where you can <span class="pink-highlight">find me.</span></div>
+        </div>
+        <div class="bottom-socials-icons">
+            <a href="https://github.com/SassyCatSlaps" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+            <a href="https://www.linkedin.com/in/vik-furlow/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+            <a href="mailto:viktoriyafurlow@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-3x"></i></a>
+            <a href="https://linktr.ee/sassycatslaps" target="_blank"><i class="fa-solid fa-seedling fa-3x"></i></a>
+            <li><a href="https://open.spotify.com/playlist/7jvVLjCcg0pqHZsHTWiPup?si=0a69a935027447c7" target="_blank"><i class="fab fa-spotify fa-3x"></i></a></li>
+        </div>
+    </div>
+</section>
+<!-- end socials section -->
+
+<!-- javascript reference -->
+<script src="JS/portfolio.js"></script>
+</body>
+</html>

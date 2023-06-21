@@ -1,0 +1,766 @@
+    body {
+        margin: 0%;
+        background-color: #070724ee;
+    }
+
+/* start add spacing between sections */
+.about-section,
+.projects-section,
+.socials-section,
+.skills-section {
+    padding: 170px 0;
+}
+
+/* end add section spacing */
+
+/* START navbar */
+#navbar {
+  transform: translateY(0);
+  transition: top 0.5s; /* Updated transition property to control the speed */
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#navbar a {
+  float: left;
+  width: 4%;
+  margin-right: 50px;
+  margin-left: 50px;
+  text-align: center;
+  padding: 12px 0;
+  padding-top: 30px;
+  transition: color 0.6s ease; /* Updated transition property */
+  font-size: 50px;
+  display: inline;
+  color: #61bac5; 
+}
+
+#navbar i:hover {
+  color: #dd6d78; /* Change the color of the icon on hover */
+}
+
+.top-nav-right {
+  float: right;
+  padding-right: 10px;
+}
+
+/* keep none for now i reckon */
+.active {
+    background-color: none;
+}
+
+.tooltip {
+    position: absolute;
+    display: none;
+    background-color: #ffffff00;
+    color: #61bac5;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: League Spartan, Calibre, Inter, "San Francisco", sans-serif;
+    font-weight: 600;
+    margin: -45px 50px 10px 65px;
+}
+
+#navbar a:hover .tooltip {
+    display: block;
+}
+/* END navbar */
+
+/* ******+********+*********+********+*********+**********+********+******+********+******+*********+*********+**********+*********+*********+*********+*********+********+*********+*********+*********+******** */
+
+/* START left-side icon effect */
+.social-icons {
+    position: fixed;
+    left: 40px;
+    top: 76%;
+    transform: translateY(-50%); /* Adjusts the left value to position the icons where I want them. The 'top' and 'transform' properties are used to vertically center the icons. */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons a {
+    display: block;
+    color: #61bac5;
+    font-size: 24px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+    margin-bottom: 27px; /* Adjusts the margin-bottom value as needed */
+}
+
+/* hover effect */
+.social-icons a:hover {
+    color: #dd6d78;
+    transform: translateY(-3px); /* Adjusts the translateY value to control the movement */
+    filter: drop-shadow(0px 6px 5px rgba(111, 211, 224, 0.377));
+}
+
+.vertical-line {
+    position: fixed;
+    left: 50px;
+    bottom: 0;
+    top: 50%;
+    transform: translateY(50%);
+    width: 1px;
+    height: calc(78% - 5px);/* Adjusts the height as needed */
+    background-color: #61bac5;
+}
+
+.side-icon-tooltip {
+    position: fixed;
+    display: none;
+    background-color: #33333300;
+    color: #61bac5;
+    padding: 1px 30px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: League Spartan, Calibre, Inter, "San Francisco", sans-serif;
+    margin: 640px 100px 40px 55px; /* Adjusts the values to position the tooltip closer to the cursor */
+}
+/* END left-side icon effect */
+
+/* ******+********+*********+********+*********+**********+********+******+********+******+*********+*********+**********+*********+*********+*********+*********+********+*********+*********+*********+******** */
+
+/* START right-side email effect */
+.email-container {
+    position: fixed;
+    right: 30px;
+    top: 63%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.vertical-email {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: #61bac5;
+    font-size: 17px;
+    letter-spacing: .7px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin-right: 10px;  /* Adjusts the margin-right value as needed */
+    height: 0px;
+}
+
+.vertical-email:hover {
+    color: #dd6d78;
+    transform: translateY(-3px); /* Adjusts the translateY value to control the movement */
+}
+
+.vertical-line2 {
+    position: fixed;
+    right: 50px;
+    bottom: 0;
+    height: calc(11% - 5px); /* Adjusts the height as needed */
+    width: 1px;
+    background-color: #61bac5;
+}
+/* END right-side email effect */
+
+/* ******+********+*********+********+*********+**********+********+******+********+******+*********+*********+**********+*********+*********+*********+*********+********+*********+*********+*********+******** */
+
+* {
+    box-sizing: border-box;
+}
+
+/* ******+********+*********+********+*********+**********+********+******+********+******+*********+*********+**********+*********+*********+*********+*********+********+*********+*********+*********+******** */
+
+/* START home page body (recycle code if possible for other sections */
+
+/* start underline effect for links */
+.home-page-text a:not(.resume-link) {
+    position: relative;
+    text-decoration: none;
+}
+
+.home-page-text a:not(.resume-link)::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust the position of the underline */
+    left: 0;
+    width: 0;
+    height: 1px;/* Adjust the thickness of the underline */
+    background-color: #dd6d78; /* Adjust the color of the underline */
+    transition: width 0.3s ease;/* Add transition for smooth animation */
+}
+
+.home-page-text a:not(.resume-link):hover::after {
+    width: 100%;/* Expand the width to 100% on hover */
+}
+/* end underline effect for links */
+
+h6 {
+    background-color: none;
+    text-align: right;
+    padding-right: 19rem;
+    color: #dd6d78;
+    font-size: 2rem;
+    font-family: League Spartan, Calibre, Inter, "San Francisco", sans-serif;
+    margin: 0;
+}
+
+h1 {
+    background-color: none;
+    text-align: right;
+    padding-right: 15rem;
+    color: #61bac5;
+    font-size: 10rem;
+    font-family: League Spartan, Calibre, Inter, "San Francisco", sans-serif;
+    margin: 0;
+}
+
+.pink-font1 {
+    background-color: none;
+    text-align: right;
+    padding-right: 11rem;
+    color: #dd6d78;
+    font-size: 1.4rem;
+    font-family: League Spartan, Calibre, Inter, "San Francisco", sans-serif;
+    margin: 0;
+    
+}
+
+a {
+    color: #dd6d78;
+}
+
+p {
+    background-color: none;
+    text-align: right;
+    padding-right: 15rem;
+    color: #61bac5;
+    font-size: 1.3rem;
+    font-family: League Spartan, Calibre, Inter, "San Francisco", sans-serif;
+    margin: 0;
+}
+
+.home-page-text {
+    padding-top: 17rem;
+}
+
+/* start home page button */
+.resume-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-top: 20px;
+    padding-top: rem;
+}
+ .resume-button {
+     display: inline-block;
+     padding: 10px 20px;
+     font-size: 18px;
+     text-align: center;
+     text-decoration: none;
+     color: #61bac5;
+     background-color: rgba(255, 255, 255, 0);  /* Adjust the alpha value */
+     border: 1px solid #61bac5;
+     border-radius: 8px;
+     transition: box-shadow 0.3s ease-in-out;
+    font-family: League Spartan, Calibre, Inter, "San Francisco", sans-serif;
+    position: absolute;
+    right: 15rem;
+ }
+.resume-button:hover {
+    box-shadow: 0 0 5px 1px #61bac5;
+    background-color: #7dd8e41e;
+    text-decoration: none;
+}
+/* end home page button */
+
+/* END home page text */
+
+/* ******+********+*********+********+*********+**********+********+******+********+******+*********+*********+**********+*********+*********+*********+*********+********+*********+*********+*********+******** */
+
+/* START about me section */
+
+/* start about-me-image section */
+.about-section-content {
+  display: flex;
+  align-items: center;
+}
+
+.about-image {
+    flex: 0 0 auto;
+    position: relative; /* Add this line to make the image container a positioned element */
+    margin-left: 1200px; /* Adjusts the spacing between the photo and text */
+    margin-bottom: -80px;
+    width: 250px; /* Adjusts the size of the circular photo */
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 20px 8px 25px rgba(97, 186, 197, 0.5);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1 1 auto;
+  text-align: left;
+}
+/* end about-me-image section */
+
+.about-section {
+  padding-top: 470px;
+}
+
+.blue-heading-1 {
+  margin-top: 0;
+  margin-bottom: 0px;
+  background-color: none;
+  text-align: left;
+  padding-left: 3rem;
+  color: #61bac5;
+  font-size: 6rem;
+  font-family: League Spartan, Calibre, Inter, "San Francisco", sans-serif;
+  margin: 0;
+  margin-left: 180px;
+}
+
+.blue-heading-1::after {
+  content: "";
+  display: block;
+  width: 500px;
+  height: 0.5px;
+  background-color: #61bac5;
+  margin-left: 470px;
+  margin-top: -50px;
+}
+
+.blue-text-aboutme {
+  padding-top: 10px;
+  padding-left: 50px;
+  margin-left: 180px;
+  color: #61bac5;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.pink-highlight {
+    color: #dd6d78;
+}
+/* END about me section */
+
+/* ******+********+*********+********+*********+**********+********+******+********+******+*********+*********+**********+*********+*********+*********+*********+********+*********+*********+*********+******** */
+
+/* START projects section */
+.projects-section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blue-heading-2 {
+    background-color: none;
+    text-align: right;
+    display: block;
+    padding-left: 80rem;
+    color: #61bac5;
+    font-size: 6rem;
+    font-family: League Spartan, Calibre, Inter, "San Francisco", sans-serif;
+    padding-bottom: 70px;
+}
+
+.blue-heading-2::after {
+  content: "";
+  display: block;
+  width: 500px; /* Adjust the width of the line as needed */
+  height: .5px; /* Adjust the height of the line as needed */
+  background-color: #61bac5; /* Adjust the color of the line as needed */
+  margin-left: -530px; /* Adjust the distance between the line and the heading as needed */
+  margin-top: -50px; /* Adjust the vertical position of the line as needed */
+}
+
+/* START underline effect for links */
+.project-link-text a {
+    position: relative;
+    text-decoration: none;
+    margin-left: 1000px;
+    font-size: 30px;
+    line-height: 1.7;
+    font-family: League Spartan, Calibre, Inter, "San Francisco", sans-serif;
+}
+
+.project-link-text a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;/* Adjust the position of the underline */
+    left: 0;
+    width: 0;
+    height: 1px; /* Adjust the thickness of the underline */
+    background-color: #dd6d78;   /* Adjust the color of the underline */
+    transition: width 0.3s ease;  /* Add transition for smooth animation */
+}
+
+.project-link-text a:hover::after {
+    width: 100%;  /* Expand the width to 100% on hover */
+}
+/* END underline effect for links */
+
+.projects-section-content ul {
+    list-style: none;  /* Removes the default bullet points */
+}
+
+.projects-section-content li {
+    margin-bottom: 15px; /* Adjust the margin between list items as needed */
+    /* position: fixed; */
+}
+
+.projects-subheading {
+    background-color: none;
+    text-align: right;
+    color: #61bac5;
+    font-family: League Spartan, Calibre, Inter, "San Francisco", sans-serif;
+    margin-top: auto;
+    font-size: 45px;
+    line-height: 1.7;
+    padding-top: 3rem;
+    margin-bottom: 15px;
+    margin-right: 17rem;
+}
+
+/* image containers */
+.project-img1 img,
+.project-img2 img,
+.project-img3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-img1 {
+    width: 540px;   /* Adjusts the width of the container as needed */
+    height: 320px;  /* Adjusts the height of the container as needed */
+    border: 2px solid #61bac5;  /* Adjusts the border properties as needed */
+    border-radius: 8px;     /* Adjusts the border radius to create rounded corners */
+    padding: 5px;   /* Adjusts the padding inside the container as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: -450px;
+    margin-left: -85px;
+    }
+
+.project-img2 {
+    width: 540px; 
+    height: 320px; 
+    border: 2px solid #61bac5; 
+    border-radius: 8px; 
+    padding: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: -850px;
+    margin-left: -85px;
+    margin-top: 500px;
+    }
+
+.project-img3 {
+    width: 540px; 
+    height: 320px; 
+    border: 2px solid #61bac5; 
+    border-radius: 8px; 
+    padding: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: -1180px;
+    margin-left: -85px;
+    margin-top: 900px;
+    }
+/* END projects section */
+
+/* ******+********+*********+********+*********+**********+********+******+********+******+*********+*********+**********+*********+*********+*********+*********+********+*********+*********+*********+******** */
+
+/* START skills section */
+.skills-section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 30px;
+}
+
+.blue-heading-3 {
+    padding-bottom: 130px;
+    background-color: none;
+    text-align: left;
+    padding-right: 40rem;
+    color: #61bac5;
+    font-size: 6rem;
+    font-family: League Spartan, Calibre, Inter, "San Francisco", sans-serif;
+    margin: 0;
+    margin-left: 180px;
+}
+
+.blue-heading-3::after {
+    content: "";
+    display: block;
+    width: 500px;
+    height: 0.5px;
+    background-color: #61bac5;
+    margin-left: 285px;
+    margin-top: -50px;
+}
+
+.skills-subheading {
+    background-color: none;
+    color: #61bac5;
+    font-family: League Spartan, Calibre, Inter, "San Francisco", sans-serif;
+    font-size: 45px;
+    line-height: 1.7;
+    padding-right: 70rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    text-align: right;
+}
+
+.skills-list-items {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 10px;
+    color: #dd6d78;
+    font-family: League Spartan, Calibre, Inter, "San Francisco", sans-serif;
+    font-size: 30px;
+    line-height: 1.5;
+    padding-left: 45rem;
+}
+
+.skills-list-items {
+    margin-bottom: 15px;
+}
+
+ .langlogos {
+    width: 125px;
+    height: auto;
+    margin-top: 35px;
+    margin-left: 95rem;
+}
+
+.proglanglogos {
+    margin-bottom: -17rem;
+}
+
+.frameworkLogos {
+    margin-top: rem;
+    margin-bottom: -8.5rem;
+}
+
+.framLogos {
+    width: 175px;
+    height: auto;
+    margin-left: 74rem;
+    margin-bottom: -3rem;
+}
+
+
+.managementLogos {
+    width: 230px;
+    height: auto;
+    margin-bottom: -13rem;
+    margin-left: 85rem;
+}
+
+.projMangLogos {
+    margin-top: -20px;
+}
+
+.DataBaseLogos {
+    width: 140px;
+    height: auto;
+    margin-bottom: -10rem;
+    margin-left: 72rem;
+}
+
+.DbLogos {
+    margin-top: -30px;
+}
+
+.ide-Logos {
+    width: 200px;
+    height: auto;
+    margin-bottom: -13rem;
+    margin-left: 85rem;
+}
+
+.IDEsLogos {
+    margin-top: -30px;
+}
+
+.VersCntrl-Logos {
+    width: 160px;
+    height: auto;
+    margin-bottom: -10rem;
+    margin-left: 63rem;
+}
+
+.VCLogos {
+    margin-top: -30px;
+}
+
+.Tool-Logos {
+    width: 190px;
+    height: auto;
+    margin-bottom: -28rem;
+    margin-left: 80rem;
+}
+
+.ToolsLogos {
+    margin-top: -30px;
+}
+/* END skills section */
+
+/* ******+********+*********+********+*********+**********+********+******+********+******+*********+*********+**********+*********+*********+*********+*********+********+*********+*********+*********+******** */
+
+/* START socials section */
+.socials-section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.socials-subheading {
+    background-color: none;
+    color: #61bac5;
+    font-family: League Spartan, Calibre, Inter, "San Francisco", sans-serif;
+    font-size: 60px;
+    line-height: 1.7;
+    padding-right: 50rem;
+    margin-top: -5rem;
+    /* padding-bottom: 2rem; */
+}
+
+.socials-text {
+    background-color: none;
+    text-align: left;
+    padding-left: 15rem;
+    color: #61bac5;
+    font-size: 1.7rem;
+    font-family: League Spartan, Calibre, Inter, "San Francisco", sans-serif;
+    margin: 0;
+    line-height: 1.7;
+}
+
+.socials-line2 {
+    padding-left: 15rem;
+}
+
+.socials-line3 {
+    margin-left: 10rem;
+}
+
+.bottom-socials-icons {
+  display: flex;  /* Add flex display */
+  justify-content: center;  /* Align icons horizontally in the center */
+  margin-top: 8rem;
+}
+
+.bottom-socials-icons a {
+    display: flex;  /* Add flex display to each anchor tag */
+    align-items: center;  /* Align icon vertically in the middle of the anchor tag */
+    color: #61bac5;
+    font-size: 24px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin-right: 7rem;  /* Adds right margin between icons */
+    margin-left: 5rem;
+    transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+/* hover effect */
+.bottom-socials-icons a:hover {
+    color: #dd6d78;
+    transform: translateY(-3px); /* Adjusts the translateY value to control the movement */
+    filter: drop-shadow(2px 2px 4.5px rgba(105, 199, 212, 0.445));
+}
+/* END socials section */
+
+
+/* Scroll to sections smoothly */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ******+********+*********+********+*********+**********+********+******+********+******+*********+*********+**********+*********+*********+*********+*********+********+*********+*********+*********+******** */
+
+
+/* START MEDIA QUERIES */
+
+/* Media Queries for Mobile Devices */
+/* @media only screen and (max-width: 480px) { */
+  /* Adjust the styles for mobile devices */
+  /* can make the font size smaller or adjust the layout */
+  /* body {
+    font-size: 14px;
+  } */
+  
+  /* Adjusts the size of the logo on mobile */
+  /* #navbar img {
+    width: 80px;
+  } */
+  
+  /* Adjusts the layout of the social icons on mobile */
+  /* .social-icons {
+    display: none;
+  }
+  
+  .email-container {
+    text-align: center;
+    margin-top: 10px;
+  } */
+
+/* Media Queries for Tablet Devices */
+/* @media only screen and (min-width: 481px) and (max-width: 1024px) { */
+  /* can change the width of some elements or adjust the spacing */
+  /* Adjusts the width of the projects section on tablets */
+  /* .projects-section {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+} */
+
+/* Media Queries for Laptop/Desktop Devices */
+/* @media only screen and (min-width: 1025px) { */
+  /* can change the layout or adjust the spacing */
+  /*  Adjusts the layout of the skills section on larger screens */
+  /* .skills-section-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+} */
+
+/* @media screen and (max-width: 767px) { */
+    /* CSS rules for screens with a maximum width of 767px */
+    /* adjusting column widths or stacking elements vertically */
+/* } */
+
+/* @media screen and (max-width: 991px) { */
+    /* CSS rules for screens with a maximum width of 991px */
+    /* reducing font sizes to improve readability */
+/* } */
+
+/* @media screen and (max-width: 480px) { */
+    /* CSS rules for screens with a maximum width of 480px */
+    /* hiding sidebar elements or reducing image sizes */
+/* } */
+
+/* @media screen and (max-width: 767px) { */
+    /* CSS rules for screens with a maximum width of 767px */
+    /* showing a mobile-friendly hamburger menu */
+/* } */
